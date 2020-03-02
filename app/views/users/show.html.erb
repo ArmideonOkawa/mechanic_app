@@ -1,1 +1,15 @@
 <h1>Car list</h1>
+<div>
+<% if @user.cars == [] %>
+<%= "You do not have any cars" %>
+<% else %>
+    <% @user.cars.each do |car| %>
+    <%= car.make %>
+    <% end %>
+<% end %>
+</div>
+<br>
+<%= link_to  "Create Car", new_car_path %>
+<div class="navi">
+    <%= link_to  "Home", user_path %> | <%= link_to  "Logout", logout_path %>
+</div>
