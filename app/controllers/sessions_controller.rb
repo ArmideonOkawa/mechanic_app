@@ -8,9 +8,10 @@ class SessionsController < ApplicationController
       
 
       if @user && @user.authenticate(params[:password])
+        #byebug
         session[:user_id] = @user.id
         flash[:success] = "Successfully logged in!"
-        redirect_to '/users'
+        redirect_to user_path(@user)
       else
         flash[:warning] = "Incorrect email or password"
         redirect_to '/login'

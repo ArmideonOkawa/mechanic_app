@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
-
- resources :users, only:[:new]
+  get '/users/:id' => 'users#show'
+ resources :cars
+ resources :users, only: [:new, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root "pages#show", page: "home"
