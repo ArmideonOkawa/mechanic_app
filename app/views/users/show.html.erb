@@ -1,10 +1,10 @@
 <h1>Car list</h1>
-<div>
+<div class='carlist'>
 <% if @user.cars == [] %>
 <%= "You do not have any cars" %>
 <% else %>
     <% @user.cars.each do |car| %>
-    <li><%= car.make %>:<%= car.model %></li>
+    <li><%= car.make %>:<%= car.model %>  <%= button_to "Or Login", car_path, method: "destroy" %></li>
     <% end %>
 <% end %>
 </div>

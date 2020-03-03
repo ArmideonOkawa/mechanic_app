@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_145740) do
+ActiveRecord::Schema.define(version: 2020_03_03_222913) do
 
   create_table "cars", force: :cascade do |t|
     t.string "make"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 2020_03_03_145740) do
     t.index ["car_id"], name: "index_issues_on_car_id"
   end
 
+  create_table "problems", force: :cascade do |t|
+    t.integer "car_id", null: false
+    t.string "problem"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["car_id"], name: "index_problems_on_car_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
@@ -39,4 +47,5 @@ ActiveRecord::Schema.define(version: 2020_03_03_145740) do
 
   add_foreign_key "cars", "users"
   add_foreign_key "issues", "cars"
+  add_foreign_key "problems", "cars"
 end

@@ -14,6 +14,13 @@ class CarsController < ApplicationController
         redirect_to car_path(@car)
     end
 
+    def destroy
+
+        @car = Car.find(params[:id])
+        @car.destroy
+        redirect_to login_path
+    end
+
     private
     def car_params
         params.require(:car).permit(:user_id, :make, :model, :color)
