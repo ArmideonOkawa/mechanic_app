@@ -4,7 +4,7 @@
 <%= "You do not have any cars" %>
 <% else %>
     <% @user.cars.each do |car| %>
-    <%= car.make %>
+    <li><%= car.make %>:<%= car.model %></li>
     <% end %>
 <% end %>
 </div>

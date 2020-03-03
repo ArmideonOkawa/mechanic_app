@@ -10,9 +10,8 @@ class CarsController < ApplicationController
 
     def create
         @user = current_user
-        # @car = Car.create(car_params)
         @car = @user.cars.create(car_params)
-        redirect_to user_path(@user)
+        redirect_to car_path(@car)
     end
 
     private

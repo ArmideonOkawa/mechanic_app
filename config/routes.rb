@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
  # get '/users/:id' => 'users#show'
- resources :cars
- resources :users
+ resources :cars, only: [:index, :new, :show, :destroy]
+ resources :users, only: [:index, :new, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root "pages#show", page: "home"
