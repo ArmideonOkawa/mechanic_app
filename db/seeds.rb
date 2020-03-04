@@ -12,7 +12,8 @@ Problem.destroy_all
 
 puts "Done!"
 
-jeremy = User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
+# User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
+
 
 ase_certs = ["Engines", "Transmissions", "A/C System", "Brakes", "Drivetrain",
             "Suspension", "Electrical"]
