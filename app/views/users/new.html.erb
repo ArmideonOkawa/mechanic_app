@@ -1,10 +1,9 @@
 <style>
 body {background-color: coral;}
+
 </style>
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <h2 class="text-center">Log in</h2>
+      <h2 class="text-center">Sign Up</h2>
 
    <%= bootstrap_form_for @user do |f| %>
  <%= flash[:warning] if (flash[:warning]) %>
@@ -19,10 +18,9 @@ body {background-color: coral;}
                           placeholder: 'password' %>
 
 
-   <%= f.submit "Log in", class: 'form-control login-button' %>
+   <%= f.submit "Sign Up", class: 'form-control login-button' %>
 <% end %>
 
-     </div>
-  </div> 
+    
 </div>
 
