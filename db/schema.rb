@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 2020_03_03_222913) do
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
-  create_table "issues", force: :cascade do |t|
-    t.string "problem"
-    t.integer "car_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["car_id"], name: "index_issues_on_car_id"
-  end
-
   create_table "problems", force: :cascade do |t|
     t.integer "car_id", null: false
     t.string "problem"
@@ -46,6 +38,5 @@ ActiveRecord::Schema.define(version: 2020_03_03_222913) do
   end
 
   add_foreign_key "cars", "users"
-  add_foreign_key "issues", "cars"
   add_foreign_key "problems", "cars"
 end

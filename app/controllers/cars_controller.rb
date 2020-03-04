@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
     
     def new
+        @problem = Problem.new
         @car = Car.new
     end
 

@@ -1,8 +1,17 @@
-<h1><%= @car.make %>
+<h1><%= @car.make %></h1>
 <br>
-<h3><%= @car.model %>
+Model: <%= @car.model %>
+<br>
+Color: <%= @car.color %>
+<br>
+Problem: 
+<% @car.problems.each do |problem| %>
+    
+    <li><%= problem.problem %> </li>
+
+    <% end %>
 
 <div>
-    <h1>Create an issue</h1>
+<%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
     
 </div>

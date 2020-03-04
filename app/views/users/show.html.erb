@@ -4,7 +4,9 @@
 <%= "You do not have any cars" %>
 <% else %>
     <% @user.cars.each do |car| %>
-    <li><%= car.make %>:<%= car.model %>  <%= button_to "Or Login", car_path, method: "destroy" %></li>
+    <li><%= car.make %>:<%= car.model %> :<%= car.color %>
+    <%= button_to "View/Edit", car_path(car), method: "get" %>
+    </li>
     <% end %>
 <% end %>
 </div>
