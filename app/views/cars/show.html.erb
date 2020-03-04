@@ -1,9 +1,11 @@
-<h1><%= @car.make %></h1>
+<h1> Your car </h1>
+<h3>Make: <%= @car.make %>
 <br>
 Model: <%= @car.model %>
 <br>
 Color: <%= @car.color %>
 <br>
+</h3>
 Problem: 
 <% @car.problems.each do |problem| %>
     
