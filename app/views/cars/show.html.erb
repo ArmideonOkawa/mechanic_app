@@ -1,19 +1,18 @@
-<h1> Your car </h1>
-<h3>Make: <%= @car.make %>
+<body>
+<h1><%= @car.color.capitalize %> <%= @car.make.capitalize %> <%= @car.model.upcase %> </h1>
+
+Problem(s) with this car: 
 <br>
-Model: <%= @car.model %>
-<br>
-Color: <%= @car.color %>
-<br>
-</h3>
-Problem: 
 <% @car.problems.each do |problem| %>
     
-    <li><%= problem.problem %> </li>
+    <%= problem.problem %>,
 
     <% end %>
 
 <div>
-<%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
-    
+<br>
+<%= button_to "Report a new problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
+
+<%= button_to "Back", user_path(@car.user_id), method: "get" %>
 </div>
+<body>

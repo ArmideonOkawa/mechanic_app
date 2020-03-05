@@ -12,7 +12,12 @@ class CarsController < ApplicationController
     def create
         @user = current_user
         @car = @user.cars.create(car_params)
-        redirect_to car_path(@car)
+        if @car.valid?
+            redirect_to user_path(@user)
+        else
+            flash[:errors] = @car.errors.full_mesasges
+            redirect_to new_car_path
+        end
     end
 
     def destroy

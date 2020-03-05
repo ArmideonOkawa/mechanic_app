@@ -1,3 +1,35 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: static gray 10px;
+}
+label{
+    font-size: 18px;
+}
+
+input#name{
+    width:100%;
+    background-color:white;
+}
+input#password{
+    width:100%;
+    background-color:white;
+}
+div.question{
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+}
+input.btn.btn-default{
+    text-align: center;
+    background-color:white;
+    width:50px;
+}
+input.btn.btn-default:hover{
+    background-color:green;
+    opacity: 75%;
+}

@@ -1,13 +1,14 @@
-<h1>Car list</h1>
+<body>
+<h1>Your cars</h1>
 <div class='carlist'>
 <% if @user.cars == [] %>
 <%= "You do not have any cars" %>
 <% else %>
     <% @user.cars.each do |car| %>
-    <li><%= car.make %></li>
-    <li><%= car.model %></li> 
-    <%= car.color %>
+        <%= car.color.capitalize %> <%= car.make.capitalize %> <%= car.model.upcase %>
+        <br>
     <%= button_to "View/Edit", car_path(car), method: "get" %>
+    <br>
     </li>
     <% end %>
 <% end %>
@@ -15,5 +16,6 @@
 <br>
 <%= link_to  "Create Car", new_car_path %>
 <div class="navi">
-    <%= link_to  "Home", user_path %> | <%= link_to  "Logout", logout_path %>
+     <%= link_to  "Logout", logout_path %>
 </div>
+<body>

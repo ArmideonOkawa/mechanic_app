@@ -1,3 +1,54 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    border: static gray 10px;
+}
+label#username{
+    font-size: 18px;
+}
+label#password{
+    font-size: 18px;
+}
+input#user_name{
+    width:100%
+}
+input#user_password{
+    width:100%
+}
+div.question{
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+input#user_name{
+background-color: white;
+}
+
+input#user_password{
+background-color: white;
+}
+
+input{
+    background-color: white;
+}
+input:hover{
+    background-color: green;
+    opacity: 75%;
+}
+input#car_make{
+background-color: white;
+}
+input#car_model{
+background-color: white;
+}
+input#car_color{
+background-color: white;
+}
+input#problem_problem{
+    background-color: white;
+}
