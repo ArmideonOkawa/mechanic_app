@@ -15,7 +15,7 @@ puts "Done!"
 # User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
 
 
-ase_certs = ["Engines", "Transmissions", "A/C System", "Brakes", "Drivetrain",
+ase_certs = ["Engine", "Transmission", "A/C System", "Brakes", "Drivetrain",
             "Suspension", "Electrical"]
 mechanics = ["Robert", "Big Mac", "Joseph", "Hakeem", "Andre",
             "Joshua", "Earl", "Ozzy", "Juliano", "Goose", "Mike",
