@@ -1,12 +1,16 @@
 class ProblemsController < ApplicationController
 
+    def index
+        @problems = Problem.all
+    end
+
     def new
         @problem = Problem.new
         @car_id = params[:id]
     end
 
     def show
-        @problem = Problem.find(params[:id])
+        @car = Car.find(params[:id])
     end
 
     def create

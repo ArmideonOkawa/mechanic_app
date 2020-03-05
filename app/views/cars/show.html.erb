@@ -4,12 +4,7 @@ Model: <%= @car.model %>
 <br>
 Color: <%= @car.color %>
 <br>
- 
-Problem: <% @car.problems.each do |problem| %>
-    
-    <li><%= problem.problem %> <%= link_to  "Book Appointment", new_appointment_path %> </li>
-
-    <% end %>
+ <%= link_to  "Current Problems:", problem_path %><%= @car.problems.length %>
 
 <div>
 <%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>

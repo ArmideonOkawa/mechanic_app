@@ -1,1 +1,13 @@
-<%= @problem.problem %>
+
+Problem: <% @car.problems.each do |problem| %>
+    
+    <li><% problem.id %><%= problem.problem %>  <%= button_to 'Book a mechanic', new_appointment_path(problem.id)  , :method=>:get %> </li>
+
+ <%
+=begin%>
+ <% byebug %>  
+<%
+=end%>
+
+    
+    <% end %>
