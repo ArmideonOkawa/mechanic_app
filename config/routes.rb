@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+  get '/appointments/index' => 'appointments#index'
   post '/appointments' => 'appointments#create', as: 'appointments'
   get '/problems/:id/appointments/new' => 'appointments#new', as: 'new_appointment'
  resources :cars #, only: [:index, :new, :show, :destroy]

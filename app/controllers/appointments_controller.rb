@@ -11,22 +11,21 @@ class AppointmentsController < ApplicationController
     def new
         @problem_id = params[:id]
         @appointment = Appointment.new
-        @mechanic_id = Mechanic.all.select{|mechanic| mechanic.specialty}
-        byebug
+        @mechanics = Mechanic.all.select{|mechanic| mechanic.specialty}
+        
     end
 
     def create 
-        @problem_id = Problem
-        # byebug
+
         @appointment = Appointment.create(appt_params)
-        #byebug
-        redirect_to appointments_path
+        
+        redirect_to appointments_index_path
     end
 
 
     private
     def appt_params
-    params.permit(:problem_id, :mechanic_id)
+    params.require(:appointment).permit(:problem_id, :mechanic_id)
     end
 
 end
