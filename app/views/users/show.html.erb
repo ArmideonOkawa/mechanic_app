@@ -1,16 +1,30 @@
-<body>
-<h1>Your cars</h1>
+<style>
+body {background-color: coral;}
+h1 {font-size: 100px;}
+body {text-align: center;}
+li {list-style-type: none;}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+.grid-container li{text-align:center;
+font-size:20px;}
+</style>
+
+
+<h1>Car list</h1>
 <div class='carlist'>
 <% if @user.cars == [] %>
 <%= "You do not have any cars" %>
 <% else %>
+<div class="grid-container">
     <% @user.cars.each do |car| %>
-        <%= car.color.capitalize %> <%= car.make.capitalize %> <%= car.model.upcase %>
-        <br>
-    <%= button_to "View/Edit", car_path(car), method: "get" %>
-    <br>
+    <li><%= car.make %>: <%= car.model %>: <%= car.color %>
+    <%= button_to "Check Details", car_path(car), method: "get" %>
     </li>
     <% end %>
+    </div>
 <% end %>
 </div>
 <br>

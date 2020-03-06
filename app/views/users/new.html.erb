@@ -1,20 +1,28 @@
-<body>
-<h1> Sign up </h1>
-<%= form_for @user do |f| %>
-    <%= flash[:errors] if (flash[:errors]) %>
-    <div class="question">
+<style>
+body {background-color: coral;}
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h2 class="text-center">Log in</h2>
 
- <label id="username">Username</label>
- <%=f.text_field :name%><br/>
+   <%= bootstrap_form_for @user do |f| %>
+ <%= flash[:warning] if (flash[:warning]) %>
+    <%= f.text_field :name, 
+                      autofocus: true, 
+                      class: 'form-control', 
+                      placeholder: 'username' %>
 
- <label id="password">Password</label>
- <%=f.password_field :password%><br/>
+    <%= f.password_field  :password, 
+                          autocomplete: "off", 
+                          class: 'form-control',
+                          placeholder: 'password' %>
 
- <%= f.submit %> 
 
+   <%= f.submit "Log in", class: 'form-control login-button' %>
+<% end %>
 
-<% end%>
+     </div>
+  </div> 
+</div>
 
- <%= button_to "Back to Login", login_path, method: "get" %>
-    </div>
- </body>

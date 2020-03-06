@@ -1,10 +1,27 @@
-<body>
-<h1><%= @car.color.capitalize %> <%= @car.make.capitalize %> <%= @car.model.upcase %> </h1>
+<style>
+body {background-color: coral;}
+h1 {font-size: 100px;}
+body {text-align: center;}
+li {list-style-type: none;}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+.grid-container li{text-align:center;
+font-size:20px;}
+</style>
 
-Problem(s) with this car: 
+
+
+<h1><%= @car.make %></h1>
+<br>
+Model: <%= @car.model %>
+<br>
+Color: <%= @car.color %>
 <br>
  <%= link_to  "Current Problems:", problem_path %><%= @car.problems.length %>
-
+<br>
 <div>
 <%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
     

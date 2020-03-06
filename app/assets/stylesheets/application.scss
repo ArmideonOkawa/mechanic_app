@@ -10,12 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+<<<<<<< HEAD:app/assets/stylesheets/application.css
 h1{
     text-align:center
 }
 body{
     text-align: center
 }
+=======
+
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+// @import "bootstrap-sprockets";
+// ...default comments
+
+// Bootstrap
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Variables
+@import "base/variables";
+
+// Partials - main css files
+@import "partials/layout/*"
+>>>>>>> 376832a9113961bb760d080b75af0306476d4396:app/assets/stylesheets/application.scss

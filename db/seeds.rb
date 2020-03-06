@@ -5,13 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
+
 Car.destroy_all
 Mechanic.destroy_all
 Problem.destroy_all
 
 puts "Done!"
+20.times do
+    Car.create(make: Faker::Vehicle.make, model: Faker::Vehicle.model, color: Faker::Vehicle.color)
 
+end
 # User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
 
 
