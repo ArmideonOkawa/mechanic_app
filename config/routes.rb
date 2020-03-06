@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #resources :appointments
   resources :problems
   get "/pages/:page" => "pages#show"
 
@@ -8,6 +9,10 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+
+  get '/appointments/index' => 'appointments#index'
+  post '/appointments' => 'appointments#create', as: 'appointments'
+  get '/problems/:id/appointments/new' => 'appointments#new', as: 'new_appointment'
  resources :cars #, only: [:index, :new, :show, :destroy]
  resources :users, only: [:index, :new, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

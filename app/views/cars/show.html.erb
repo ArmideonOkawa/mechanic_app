@@ -3,16 +3,10 @@
 
 Problem(s) with this car: 
 <br>
-<% @car.problems.each do |problem| %>
-    
-    <%= problem.problem %>,
-
-    <% end %>
+ <%= link_to  "Current Problems:", problem_path %><%= @car.problems.length %>
 
 <div>
-<br>
-<%= button_to "Report a new problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
-
-<%= button_to "Back", user_path(@car.user_id), method: "get" %>
+<%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
+    
 </div>
-<body>
+

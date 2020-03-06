@@ -1,0 +1,10 @@
+<% @problems.each do |problem| %>
+<li><%= problem.problem %> <%= button_to '+', {:controller => "appointments", :action => "new", :problem_id => problem.id } , :method=>:get %> </li>
+
+<% end %>
+
+Problem: <% @car.problems.each do |problem| %>
+    
+    <li><%= problem.problem %>  <%= button_to '+', {:controller => "appointments", :action => "new", :problem_id => problem.id } , :method=>:get %> </li>
+    
+    <% end %>

@@ -1,0 +1,9 @@
+<h3> Choose a mechanic </h3>
+<%= form_for @appointment do |f| %>
+    
+
+    <br>
+    <%= f.collection_select(:mechanic_id, @mechanics, :id, :name) %>
+        <%= f.hidden_field :problem_id, value: @problem_id %>
+    <%= f.submit %>
+<% end %>

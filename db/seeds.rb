@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Car.destroy_all
+Mechanic.destroy_all
+Problem.destroy_all
+
+puts "Done!"
+
+# User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
+
+
+ase_certs = ["Engine", "Transmission", "A/C System", "Brakes", "Drivetrain",
+            "Suspension", "Electrical"]
+mechanics = ["Robert", "Big Mac", "Joseph", "Hakeem", "Andre",
+            "Joshua", "Earl", "Ozzy", "Juliano", "Goose", "Mike",
+            "George", "Michelle", "Jules", "Sally", "Eve", "Erin",
+            "Jackie", "Lisa", "Jennifer", "Paz"]
+
+21. times {
+    Mechanic.create(name: mechanics.sample, specialty: ase_certs.sample)
+}           
+

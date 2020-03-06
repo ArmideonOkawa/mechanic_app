@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(name: params[:name])
       
 
-      if @user && @user.authenticate(params[:password])
+      if @user && @user.authenticate(params[:password_digest])
         #byebug
         session[:user_id] = @user.id
         flash[:success] = "Successfully logged in!"
