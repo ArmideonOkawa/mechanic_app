@@ -1,5 +1,10 @@
 class CarsController < ApplicationController
     
+    
+    def index
+        @cars = Car.all
+    end
+
     def new
         @problem = Problem.new
         @car = Car.new

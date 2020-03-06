@@ -1,3 +1,19 @@
+<style>
+body {background-color: coral;}
+h1 {font-size: 100px;}
+body {text-align: center;}
+li {list-style-type: none;}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+.grid-container li{text-align:center;
+font-size:20px;}
+</style>
+
+
+
 <h1><%= @car.make %></h1>
 <br>
 Model: <%= @car.model %>
