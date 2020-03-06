@@ -9,9 +9,10 @@ class AppointmentsController < ApplicationController
     end
 
     def new
-        @problem_id = params[:id]
+        @problem_id = params[:problem]
+        @problem_list = Problem.all.select{|p| p.problem}
         @appointment = Appointment.new
-        @mechanics = Mechanic.all.select{|mechanic| mechanic.specialty}
+        @mechanics = Mechanic.all.select{|mechanic| mechanic.specialty == @problem_list}
         
     end
 

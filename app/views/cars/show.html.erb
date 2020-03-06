@@ -21,7 +21,7 @@ Model: <%= @car.model %>
 Color: <%= @car.color %>
 <br>
  <%= link_to  "Current Problems:", problem_path %><%= @car.problems.length %>
-
+<br>
 <div>
 <%= button_to "Create problem", new_problem_path, :params => {:id => @car.id}, method: "get"%>
     
