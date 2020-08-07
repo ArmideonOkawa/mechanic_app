@@ -53,7 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'rails_bootstrap_navbar'
@@ -65,3 +65,5 @@ gem 'jquery-rails'
 gem 'bootstrap_form'
 
 gem 'faker'
+
+gem "activesupport", ">= 6.0.3.1"
