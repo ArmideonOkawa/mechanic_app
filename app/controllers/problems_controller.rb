@@ -13,7 +13,7 @@ class ProblemsController < ApplicationController
         @car = Car.find(params[:id])
     end
 
-    def create
+    def create 
         @car = Car.find(params[:car_id])
         @problem = @car.problems.create(pro_params)
         redirect_to car_path(@car)

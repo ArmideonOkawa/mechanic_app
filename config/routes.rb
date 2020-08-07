@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get '/appointments/index' => 'appointments#index'
   post '/appointments' => 'appointments#create', as: 'appointments'
   get '/problems/:id/appointments/new' => 'appointments#new', as: 'new_appointment'
+  get '/appointments/:id' => 'appointments#show', as: 'appointment'
+
+  
  resources :cars #, only: [:index, :new, :show, :destroy]
  resources :users, only: [:index, :new, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

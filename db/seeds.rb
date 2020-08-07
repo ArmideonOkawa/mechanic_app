@@ -15,7 +15,7 @@ puts "Done!"
     Car.create(make: Faker::Vehicle.make, model: Faker::Vehicle.model, color: Faker::Vehicle.color)
 
 end
-# User.create(name: "Armideonokawa", password_digest: "Jojo2008!")
+ User.create(name: "Armideonokawa", password_digest: "test")
 
 
 ase_certs = ["Engine", "Transmission", "A/C System", "Brakes", "Drivetrain",

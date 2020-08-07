@@ -4,8 +4,8 @@ class AppointmentsController < ApplicationController
         @appointments = Appointment.all
     end
 
-    def show
-        
+    def show 
+        @appointment = Appointment.find(params:[:id])
     end
 
     def new
