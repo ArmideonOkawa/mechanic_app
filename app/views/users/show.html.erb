@@ -13,22 +13,17 @@ font-size:20px;}
 </style>
 
 
-<h1>Car list</h1>
 <div class='carlist'>
+<h1>Car list</h1>
 <% if @user.cars == [] %>
 <%= "You do not have any cars" %>
 <% else %>
 <div class="grid-container">
     <% @user.cars.each do |car| %>
-<<<<<<< HEAD
     <li><%= car.make %>: <%= car.model %>: <%= car.color %>
     <%= button_to "Check Details", car_path(car), method: "get" %>
-=======
-    <li><%= car.make %></li>
-    <li><%= car.model %></li> 
-    <%= car.color %>
+ 
     <%= button_to "View/Edit", car_path(car), method: "get" %>
->>>>>>> 46d3654... working code
     </li>
     <% end %>
     </div>

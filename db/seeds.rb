@@ -20,6 +20,7 @@ end
 
 ase_certs = ["Engine", "Transmission", "A/C System", "Brakes", "Drivetrain",
             "Suspension", "Electrical"]
+            
 mechanics = ["Robert", "Big Mac", "Joseph", "Hakeem", "Andre",
             "Joshua", "Earl", "Ozzy", "Juliano", "Goose", "Mike",
             "George", "Michelle", "Jules", "Sally", "Eve", "Erin",
